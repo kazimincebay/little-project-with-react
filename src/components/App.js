@@ -5,6 +5,7 @@ const App = () => {
   return (
     <div className="app-container">
       <SearchBar />
+      State değer atama
     </div>
   );
 };
