@@ -1,13 +1,17 @@
-import React from "react";
+import React, { Component } from "react";
 import SearchBar from "./SearchBar/SearchBar";
 import "./App.css";
-const App = () => {
-  return (
-    <div className="app-container">
-      <SearchBar />
-      State değer atama
-    </div>
-  );
-};
+class App extends Component{
+  onSearchImage = search =>{
+    console.log("App "+search);
+  }
+  render() {
+    return (
+      <div className="app-container">
+        <SearchBar onSearchImage={this.onSearchImage}/>
+      </div>
+    );
+  }
+}
 
 export default App;
