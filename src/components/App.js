@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import SearchBar from "./SearchBar/SearchBar";
+import ImageList from "./ImageList/ImageList";
 import "./App.css";
 import axios from "axios";
 
@@ -26,7 +27,7 @@ Authorization: "Client-ID ouowgsEn9JTAM7y-LFzVEsGe0z00g5pcTTDnWv_DuVY"
     return (
       <div className="app-container">
         <SearchBar onSearchImage={this.onSearchImage} />
-        {this.state.images.length}
+        <ImageList images={this.state.images}/>
       </div>
     );
   }
